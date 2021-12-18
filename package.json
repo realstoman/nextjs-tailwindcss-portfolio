@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "framer-motion": "^5.5.3",
     "next": "12.0.7",
     "react": "17.0.2",
