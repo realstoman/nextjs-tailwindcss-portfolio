@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 // Import images
 import WebImage1 from '../public/images/web-project-1.jpg';
 import WebImage2 from '../public/images/web-project-2.jpg';
@@ -8,7 +9,7 @@ import UIImage2 from '../public/images/ui-project-2.jpg';
 
 export const projectsData = [
 	{
-		id: 1,
+		id: uuidv4(),
 		title: 'Google Health Platform',
 		category: 'Web Application',
 		img: WebImage2,
@@ -19,31 +20,31 @@ export const projectsData = [
 		},
 	},
 	{
-		id: 2,
+		id: uuidv4(),
 		title: 'Phoenix Digital Agency',
 		category: 'Mobile Application',
 		img: MobileImage2,
 	},
 	{
-		id: 3,
+		id: uuidv4(),
 		title: 'Project Management UI',
 		category: 'UI/UX Design',
 		img: UIImage1,
 	},
 	{
-		id: 4,
+		id: uuidv4(),
 		title: 'Cloud Storage Platform',
 		category: 'UI/UX Design',
 		img: UIImage2,
 	},
 	{
-		id: 5,
+		id: uuidv4(),
 		title: 'React Social App',
 		category: 'Mobile Application',
 		img: MobileImage1,
 	},
 	{
-		id: 6,
+		id: uuidv4(),
 		title: 'Apple Design System',
 		category: 'Web Application',
 		img: WebImage1,
