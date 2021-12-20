@@ -10,7 +10,7 @@ function about() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, delay: 1 }}
 				exit={{ opacity: 0 }}
-				className="container"
+				className="container mx-auto"
 			>
 				<AboutMeBio />
 			</motion.div>
