@@ -9,7 +9,7 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 function AppHeader() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useState();
+	const [activeTheme, setTheme] = useThemeSwitcher();
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -52,7 +52,8 @@ function AppHeader() {
 									src="/images/logo-dark.svg"
 									className="w-36 cursor-pointer"
 									alt="Dark Logo"
-									width={35}
+									width={60}
+									height={160}
 								/>
 							) : (
 								<Image
