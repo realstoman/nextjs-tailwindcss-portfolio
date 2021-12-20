@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import ProjectsGrid from '../components/projects/ProjectsGrid';
 import AppBanner from '../components/shared/AppBanner';
