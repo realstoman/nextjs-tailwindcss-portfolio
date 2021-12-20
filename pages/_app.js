@@ -1,11 +1,14 @@
 import '../styles/globals.css';
 import DefaultLayout from '../components/layout/DefaultLayout';
+import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<DefaultLayout>
-			<Component {...pageProps} />
-		</DefaultLayout>
+		<AnimatePresence>
+			<DefaultLayout>
+				<Component {...pageProps} />
+			</DefaultLayout>
+		</AnimatePresence>
 	);
 }
 
