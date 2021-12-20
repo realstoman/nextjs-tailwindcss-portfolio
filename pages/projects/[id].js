@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiClock, FiTag } from 'react-icons/fi';
+import RelatedProjects from '../../components/projects/RelatedProjects';
 import { projectsData } from '../../data/projectsData';
 
 function ProjectSingle(props) {
 	return (
-		<div>
+		<div className="container mx-auto">
 			{/* Header */}
 			<div>
 				<p className="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-7 sm:mt-20 mb-7">
@@ -149,6 +150,8 @@ function ProjectSingle(props) {
 				</div>
 				{/* Single project right section details end  */}
 			</div>
+			{/* Related Projects */}
+			<RelatedProjects />
 		</div>
 	);
 }
