@@ -18,6 +18,23 @@ function ProjectsGrid() {
 	// 	selectProjectsByCategory,
 	// } = useContext(ProjectsContext);
 
+	// const searchProjectsByTitle = projectsData.filter((item) => {
+	// 	const result = item.title
+	// 		.toLowerCase()
+	// 		.includes(searchProject.toLowerCase())
+	// 		? item
+	// 		: searchProject === ''
+	// 		? item
+	// 		: '';
+	// 	return result;
+	// });
+
+	// const selectProjectsByCategory = projectsData.filter((item) => {
+	// 	let category =
+	// 		item.category.charAt(0).toUpperCase() + item.category.slice(1);
+	// 	return category.includes(selectProject);
+	// });
+
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			{/* Projects grid title start */}
@@ -113,30 +130,15 @@ function ProjectsGrid() {
 					return <ProjectSingle key={index} {...project} />;
 				})}
 				{/* {selectProject
-					? selectProjectsByCategory.map((project) => (
-							<ProjectSingle
-								title={project.title}
-								category={project.category}
-								image={project.img}
-								key={project.id}
-							/>
+					? selectProjectsByCategory.map((project, index) => (
+							<ProjectSingle key={index} {...project} />
 					  ))
 					: searchProject
-					? searchProjectsByTitle.map((project) => (
-							<ProjectSingle
-								title={project.title}
-								category={project.category}
-								image={project.img}
-								key={project.id}
-							/>
+					? searchProjectsByTitle.map((project, index) => (
+							<ProjectSingle key={index} {...project} />
 					  ))
-					: projects.map((project) => (
-							<ProjectSingle
-								title={project.title}
-								category={project.category}
-								image={project.img}
-								key={project.id}
-							/>
+					: projects.map((project, index) => (
+							<ProjectSingle key={index} {...project} />
 					  ))} */}
 			</div>
 			{/* Projects grid end */}
