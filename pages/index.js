@@ -1,11 +1,21 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import ProjectsGrid from '../components/projects/ProjectsGrid';
+import AppBanner from '../components/shared/AppBanner';
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
-			<h1>Home page</h1>
+		<div className="container mx-auto">
+			<AppBanner />
+
+			<ProjectsGrid />
+
+			<div className="mt-10 sm:mt-15 flex justify-center">
+				<div className="flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl font-medium">
+					<Link href="/projects" aria-label="More Projects">
+						More Projects
+					</Link>
+				</div>
+			</div>
 		</div>
 	);
 }

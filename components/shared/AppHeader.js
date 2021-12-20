@@ -2,11 +2,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
+import HireMeModal from '../HireMeModal';
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useState(false);
+	const [activeTheme, setTheme] = useThemeSwitcher();
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -46,15 +49,16 @@ function AppHeader() {
 						<Link href="/">
 							{activeTheme === 'dark' ? (
 								<Image
-									src="/images/logo-light.svg"
-									className="w-36"
+									src="/images/logo-dark.svg"
+									className="w-36 cursor-pointer"
 									alt="Dark Logo"
-									width={35}
+									width={60}
+									height={160}
 								/>
 							) : (
 								<Image
-									src="/images/logo-dark.svg"
-									className="w-36"
+									src="/images/logo-light.svg"
+									className="w-36 cursor-pointer"
 									alt="Dark Logo"
 									width={160}
 									height={160}
@@ -70,12 +74,11 @@ function AppHeader() {
 						aria-label="Theme Switcher"
 						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
-						{/* {activeTheme === 'dark' ? (
-							<FiMoon className="text-liText-ternary-dark hover:text-gray-400 dark:text-liText-ternary-light dark:hover:text-liBorder-primary-light text-xl" />
+						{activeTheme === 'dark' ? (
+							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)} */}
-						D
+						)}
 					</div>
 					{/* Theme switcher small screen end */}
 
@@ -92,11 +95,11 @@ function AppHeader() {
 								viewBox="0 0 24 24"
 								className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
 							>
-								{/* {showMenu ? (
+								{showMenu ? (
 									<FiX className="text-3xl" />
 								) : (
 									<FiMenu className="text-3xl" />
-								)} */}
+								)}
 							</svg>
 						</button>
 					</div>
@@ -198,25 +201,24 @@ function AppHeader() {
 						aria-label="Theme Switcher"
 						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
-						{/* {activeTheme === 'dark' ? (
-							<FiMoon className="text-liText-ternary-dark hover:text-gray-400 dark:text-liText-ternary-light dark:hover:text-liBorder-primary-light text-xl" />
+						{activeTheme === 'dark' ? (
+							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)} */}
-						D
+						)}
 					</div>
 					{/* Theme switcher large screen start */}
 				</div>
 			</div>
 			{/* Hire me modal start */}
 			<div>
-				{/* {showModal ? (
+				{showModal ? (
 					<HireMeModal
 						onClose={showHireMeModal}
 						onRequest={showHireMeModal}
 					/>
 				) : null}
-				{showModal ? showHireMeModal : null} */}
+				{showModal ? showHireMeModal : null}
 			</div>
 			{/* Hire me modal end */}
 		</motion.nav>

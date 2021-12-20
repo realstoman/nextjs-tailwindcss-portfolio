@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 // Import images
 import AmazonImage from '../public/images/brands/amazon_gray.png';
 import SonyImage from '../public/images/brands/sony_gray.png';
@@ -12,42 +14,42 @@ export const clientsHeading = 'Some of the brands I worked with';
 
 export const clientsData = [
 	{
-		id: 1,
+		id: uuidv4(),
 		title: 'Amazon',
 		img: AmazonImage,
 	},
 	{
-		id: 2,
+		id: uuidv4(),
 		title: 'Sony',
 		img: SonyImage,
 	},
 	{
-		id: 3,
+		id: uuidv4(),
 		title: 'Adidas',
 		img: AdidasImage,
 	},
 	{
-		id: 4,
+		id: uuidv4(),
 		title: 'FILA',
 		img: FilaImage,
 	},
 	{
-		id: 5,
+		id: uuidv4(),
 		title: 'NB',
 		img: NBImage,
 	},
 	{
-		id: 6,
+		id: uuidv4(),
 		title: 'SAMSUNG',
 		img: SamsungImage,
 	},
 	{
-		id: 7,
+		id: uuidv4(),
 		title: 'CANON',
 		img: CanonImage,
 	},
 	{
-		id: 8,
+		id: uuidv4(),
 		title: 'PUMA',
 		img: PumaImage,
 	},
