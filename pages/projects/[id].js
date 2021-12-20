@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { projectsData } from '../../data/projectsData';
+
 function Project() {
 	return (
 		<div>
