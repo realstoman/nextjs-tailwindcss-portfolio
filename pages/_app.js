@@ -5,9 +5,11 @@ import { AnimatePresence } from 'framer-motion';
 function MyApp({ Component, pageProps }) {
 	return (
 		<AnimatePresence>
-			<DefaultLayout>
-				<Component {...pageProps} />
-			</DefaultLayout>
+			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
+				<DefaultLayout>
+					<Component {...pageProps} />
+				</DefaultLayout>
+			</div>
 		</AnimatePresence>
 	);
 }

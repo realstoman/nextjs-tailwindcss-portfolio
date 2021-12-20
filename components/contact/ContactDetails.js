@@ -28,7 +28,7 @@ function ContactDetails() {
 				<ul>
 					{contacts.map((contact) => (
 						<li className="flex " key={contact.id}>
-							<i className="text-2xl text-gray-500 dark:text-gray-400 mr-4 mt-1">
+							<i className="text-2xl text-neutral-500 dark:text-neutral-400 mr-4 mt-1">
 								{contact.icon}
 							</i>
 							<span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">

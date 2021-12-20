@@ -6,7 +6,7 @@ function ContactForm() {
 					onSubmit={(e) => {
 						e.preventDefault();
 					}}
-					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-lg shadow-xl text-left"
+					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-lg shadow-md text-left"
 				>
 					<p className="text-primary-dark dark:text-primary-light text-2xl font-semibold mb-8">
 						Contact Form
@@ -19,7 +19,7 @@ function ContactForm() {
 							Full Name
 						</label>
 						<input
-							className="w-full px-5 py-2 border dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
+							className="w-full px-5 py-2 border border-neutral-100 dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-neutral-50 dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
 							id="name"
 							name="name"
 							type="text"
@@ -36,7 +36,7 @@ function ContactForm() {
 							Email
 						</label>
 						<input
-							className="w-full px-5 py-2 border dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
+							className="w-full px-5 py-2 border border-neutral-100 dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-neutral-50 dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
 							id="email"
 							name="email"
 							type="text"
@@ -53,7 +53,7 @@ function ContactForm() {
 							Subject
 						</label>
 						<input
-							className="w-full px-5 py-2 border dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
+							className="w-full px-5 py-2 border border-neutral-100 dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-neutral-50 dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
 							id="subject"
 							name="subject"
 							type="text"
@@ -71,7 +71,7 @@ function ContactForm() {
 							Message
 						</label>
 						<textarea
-							className="w-full px-5 py-2 border dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
+							className="w-full px-5 py-2 border border-neutral-100 dark:border-secondary-dark text-primary-dark dark:text-secondary-light bg-neutral-50 dark:bg-ternary-dark rounded-md shadow-sm text-md dark:font-medium"
 							id="message"
 							name="message"
 							cols="14"
