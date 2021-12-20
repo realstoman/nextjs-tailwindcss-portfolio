@@ -1,5 +1,3 @@
-// NOTE: This scroll to top is the actual working scroll to to when user clicks
-
 import { useState, useEffect } from 'react';
 import { FiChevronUp } from 'react-icons/fi';
 
