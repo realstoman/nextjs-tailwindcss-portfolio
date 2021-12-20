@@ -1,29 +1,36 @@
 import Link from 'next/link';
+import {
+	FiBook,
+	FiFeather,
+	FiGithub,
+	FiInstagram,
+	FiTwitter,
+} from 'react-icons/fi';
 
 const socialLinks = [
 	{
 		id: 1,
-		icon: 'G',
+		icon: <FiGithub />,
 		url: 'https://github.com/realstoman',
 	},
 	{
 		id: 2,
-		icon: 'T',
+		icon: <FiTwitter />,
 		url: 'https://twitter.com/realstoman',
 	},
 	{
 		id: 3,
-		icon: 'M',
+		icon: <FiBook />,
 		url: 'https://stoman.medium.com',
 	},
 	{
 		id: 4,
-		icon: 'IG',
+		icon: <FiInstagram />,
 		url: 'https://instagram.com/realstoman',
 	},
 	{
 		id: 5,
-		icon: 'Be',
+		icon: <FiFeather />,
 		url: 'https://behance.net/realstoman',
 	},
 ];
@@ -62,7 +69,7 @@ function AppFooter() {
 							href="https://github.com/realstoman/nextjs-tailwindcss-portfolio"
 							className="hover:underline ml-1"
 						>
-							React & TailwindCSS Portfolio
+							Next.js & TailwindCSS Portfolio
 						</Link>
 						.{' '}
 						<Link
