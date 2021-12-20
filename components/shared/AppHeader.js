@@ -4,11 +4,12 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useState('light');
+	const [activeTheme, setTheme] = useState();
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -48,15 +49,15 @@ function AppHeader() {
 						<Link href="/">
 							{activeTheme === 'dark' ? (
 								<Image
-									src="/images/logo-light.svg"
-									className="w-36"
+									src="/images/logo-dark.svg"
+									className="w-36 cursor-pointer"
 									alt="Dark Logo"
 									width={35}
 								/>
 							) : (
 								<Image
-									src="/images/logo-dark.svg"
-									className="w-36"
+									src="/images/logo-light.svg"
+									className="w-36 cursor-pointer"
 									alt="Dark Logo"
 									width={160}
 									height={160}
