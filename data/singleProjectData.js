@@ -3,9 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Image1 from '../public/images/ui-project-1.jpg';
 import Image2 from '../public/images/web-project-2.jpg';
 import Image3 from '../public/images/mobile-project-2.jpg';
-import Image4 from '../public/images/mobile-project-1.jpg';
-import Image5 from '../public/images/web-project-1.jpg';
-import Image6 from '../public/images/ui-project-2.jpg';
+
 // Import icons
 import {
 	FiFacebook,
@@ -132,31 +130,6 @@ export const singleProjectData = {
 				name: 'Youtube',
 				icon: <FiYoutube />,
 				url: 'https://www.youtube.com/c/StomanStudio',
-			},
-		],
-	},
-	RelatedProject: {
-		title: 'Related Projects',
-		Projects: [
-			{
-				id: uuidv4(),
-				title: 'Mobile UI',
-				img: Image4,
-			},
-			{
-				id: uuidv4(),
-				title: 'Web Application',
-				img: Image5,
-			},
-			{
-				id: uuidv4(),
-				title: 'UI Design',
-				img: Image6,
-			},
-			{
-				id: uuidv4(),
-				title: 'Kabul Mobile App UI',
-				img: Image3,
 			},
 		],
 	},
