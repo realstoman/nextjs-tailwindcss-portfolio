@@ -2,12 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiClock, FiTag } from 'react-icons/fi';
+import PagesMetaHead from '../../components/PagesMetaHead';
 import RelatedProjects from '../../components/projects/RelatedProjects';
 import { projectsData } from '../../data/projectsData';
 
 function ProjectSingle(props) {
 	return (
 		<div className="container mx-auto">
+			<PagesMetaHead title={props.project.title} />
+
 			{/* Header */}
 			<div>
 				<p className="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-7 sm:mt-20 mb-7">
