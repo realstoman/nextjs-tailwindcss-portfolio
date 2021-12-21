@@ -47,7 +47,7 @@ function HireMeModal({ onClose, onRequest }) {
 										id="name"
 										name="name"
 										type="text"
-										required=""
+										required
 										placeholder="Name"
 										aria-label="Name"
 									/>
@@ -58,7 +58,7 @@ function HireMeModal({ onClose, onRequest }) {
 										id="email"
 										name="email"
 										type="text"
-										required=""
+										required
 										placeholder="Email"
 										aria-label="Email"
 									/>
@@ -69,7 +69,7 @@ function HireMeModal({ onClose, onRequest }) {
 										id="subject"
 										name="subject"
 										type="text"
-										required=""
+										required
 										aria-label="Project Category"
 									>
 										{selectOptions.map((option) => (
