@@ -26,7 +26,9 @@ function useScrollToTop() {
 		});
 	};
 
-	window.addEventListener('scroll', scrollToTop);
+	if (typeof window !== 'undefined') {
+		window.addEventListener('scroll', scrollToTop);
+	}
 
 	return (
 		<>
@@ -34,8 +36,9 @@ function useScrollToTop() {
 				className="scrollToTop"
 				onClick={backToTop}
 				style={{
-					height: 45,
-					width: 45,
+					height: 40,
+					width: 40,
+					padding: 7,
 					borderRadius: 50,
 					right: 50,
 					bottom: 50,
