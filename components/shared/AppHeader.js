@@ -52,16 +52,16 @@ function AppHeader() {
 									src="/images/logo-dark.svg"
 									className="w-36 cursor-pointer"
 									alt="Dark Logo"
-									width={60}
-									height={160}
+									width={150}
+									height={150}
 								/>
 							) : (
 								<Image
 									src="/images/logo-light.svg"
 									className="w-36 cursor-pointer"
 									alt="Dark Logo"
-									width={160}
-									height={160}
+									width={150}
+									height={150}
 								/>
 							)}
 						</Link>

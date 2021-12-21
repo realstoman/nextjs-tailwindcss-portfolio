@@ -24,8 +24,9 @@ const ProjectSingle = (props) => {
 							src={props.img}
 							className="rounded-t-xl border-none"
 							alt="Single Project"
-							width={300}
-							height={250}
+							layout="responsive"
+							width={100}
+							height={90}
 						/>
 					</div>
 					<div className="text-center px-4 py-6">
