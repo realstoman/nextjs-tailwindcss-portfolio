@@ -6,9 +6,6 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 function AppBanner() {
 	const [activeTheme] = useThemeSwitcher();
 
-	const developerImageWidth = '100%';
-	const developerImageHeight = '100%';
-
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -69,8 +66,9 @@ function AppBanner() {
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
 				<Image
-					width={developerImageWidth}
-					height={developerImageHeight}
+					width={100}
+					height={70}
+					layout="responsive"
 					src={
 						activeTheme === 'dark'
 							? '/images/developer.svg'
