@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React & TailwindCSS Portfolio - With Dark Mode
 
-## Getting Started
+A simple portfolio starter theme built with Next.js and TailwindCSS. This is the Next.js version of [vuejs-tailwindcss-portfolio](https://github.com/realstoman/vuejs-tailwindcss-portfolio).
 
-First, run the development server:
+![React-TailwindCSS-Portfolio](https://user-images.githubusercontent.com/16396664/146666086-28e88beb-c2f0-431f-adfb-2396d8f64c80.png)
 
-```bash
-npm run dev
-# or
-yarn dev
+## Demo URL
+
+[https://react-tailwindcss-portfolio.netlify.app](https://react-tailwindcss-portfolio.netlify.app)
+
+## Features
+
+-   Built with [React](https://reactjs.org) and [Next.js](https://nextjs.org)
+-   [Tailwind CSS v3](https://tailwindcss.com)
+-   Custom Hooks
+-   Framer Motion Transitions & Animations
+-   Projects filter by category
+-   Projects filter by search
+-   Dark Mode
+-   Smooth scroll
+-   Counter
+-   Dynamic forms
+-   Back to top button
+-   Download file button
+-   Simple and responsive design
+
+## Installation
+
+1. ##### Make sure you have Node JS installed. If you don't have it:
+
+-   [Download it from nodejs.org](https://nodejs.org)
+-   [Install it using NVM ](https://github.com/nvm-sh/nvm)
+-   If you're on Mac, Homebrew is a good option too:
+
+```
+brew install node
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. ##### Clone the repo:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+git clone https://github.com/realstoman/nextjs-tailwindcss-portfolio.git
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. ##### Open the project folder:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+cd nextjs-tailwindcss-portfolio
+```
 
-## Learn More
+4. ##### Install packages and dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. ##### Start a local dev server at `http://localhost:3000`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   Always run `npm install` after pulling new changes
+-   I'll be constantly updating this repo as I'll be adding more sections to it, so please always check the projects section of this repo to see what tasks are under todo and in progress
+-   Coming Soon [I'll be doing a screencast](https://www.youtube.com/c/StomanStudio). Soon I'll be uploading a video to my YouTube channel where I'll be going through the process of creating this portoflio
+-   Illustrations from [unDraw](https://undraw.co) and [Freepik](https://freepik.com)
+-   Images from [Unsplash](https://unsplash.com)
+-   Feel free to use it as your own portfolio
+-   Contributions are welcome
