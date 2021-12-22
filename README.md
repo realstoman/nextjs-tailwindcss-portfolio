@@ -6,11 +6,11 @@ A simple portfolio starter theme built with Next.js and TailwindCSS. This is the
 
 ## Demo URL
 
-[https://react-tailwindcss-portfolio.netlify.app](https://react-tailwindcss-portfolio.netlify.app)
+[https://nextjs-tailwindcss-portfolio.vercel.app](https://nextjs-tailwindcss-portfolio.vercel.app)
 
 ## Features
 
--   Built with [React](https://reactjs.org) and [Next.js](https://nextjs.org)
+-   Built with [Next.js](https://nextjs.org) and [React](https://reactjs.org)
 -   [Tailwind CSS v3](https://tailwindcss.com)
 -   Custom Hooks
 -   Framer Motion Transitions & Animations
