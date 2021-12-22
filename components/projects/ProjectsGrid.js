@@ -36,7 +36,7 @@ function ProjectsGrid() {
 	// });
 
 	return (
-		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
+		<section className="py-5 mt-5 md:mt-10">
 			{/* Projects grid title start */}
 			<div className="text-center">
 				<p className="text-2xl sm:text-5xl font-semibold mb-3 text-ternary-dark dark:text-ternary-light">

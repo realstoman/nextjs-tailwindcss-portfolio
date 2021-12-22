@@ -6,7 +6,7 @@ import { aboutMeData } from '../../data/aboutMeData';
 function AboutMeBio() {
 	const [aboutMe, setAboutMe] = useState(aboutMeData);
 	return (
-		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
+		<div className="block sm:flex sm:gap-10 mt-10">
 			{/* About me portfolio image start */}
 			<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<Image

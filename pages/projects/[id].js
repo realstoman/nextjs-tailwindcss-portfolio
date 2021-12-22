@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
 import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import RelatedProjects from '../../components/projects/RelatedProjects';
@@ -13,7 +11,7 @@ function ProjectSingle(props) {
 
 			{/* Header */}
 			<div>
-				<p className="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-7 sm:mt-20 mb-7">
+				<p className="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-7 sm:mt-10 mb-7">
 					{props.project.ProjectHeader.title}
 				</p>
 				<div className="flex">
