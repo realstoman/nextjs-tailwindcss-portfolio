@@ -53,7 +53,7 @@ function AppHeader() {
 									className="w-36 cursor-pointer"
 									alt="Dark Logo"
 									width={150}
-									height={150}
+									height={120}
 								/>
 							) : (
 								<Image
@@ -61,7 +61,7 @@ function AppHeader() {
 									className="w-36 cursor-pointer"
 									alt="Dark Logo"
 									width={150}
-									height={150}
+									height={120}
 								/>
 							)}
 						</Link>
@@ -111,31 +111,25 @@ function AppHeader() {
 				<div
 					className={
 						showMenu
-							? 'block m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
+							? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
 							: 'hidden'
 					}
 				>
-					<Link
-						href="/projects"
-						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Projects"
-					>
-						Projects
-					</Link>
-					<Link
-						href="/about"
-						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-						aria-label="About Me"
-					>
-						About Me
-					</Link>
-					<Link
-						href="/contact"
-						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-						aria-label="Contact"
-					>
-						Contact
-					</Link>
+					<div className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+						<Link href="/projects" aria-label="Projects">
+							Projects
+						</Link>
+					</div>
+					<div className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+						<Link href="/about" aria-label="About Me">
+							About Me
+						</Link>
+					</div>
+					<div className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+						<Link href="/contact" aria-label="Contact">
+							Contact
+						</Link>
+					</div>
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<button
 							onClick={showHireMeModal}
@@ -148,7 +142,7 @@ function AppHeader() {
 				</div>
 				{/* Header links small screen end */}
 
-				{/* Header links small screen start*/}
+				{/* Header links large screen start*/}
 				<div className="hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-between items-center shadow-lg sm:shadow-none">
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
@@ -179,7 +173,7 @@ function AppHeader() {
 						</button>
 					</div>
 				</div>
-				{/* Header links small screen end */}
+				{/* Header links large screen end */}
 
 				{/* Header right section buttons start */}
 				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
