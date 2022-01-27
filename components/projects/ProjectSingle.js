@@ -17,6 +17,7 @@ const ProjectSingle = (props) => {
 				href="/projects/[id]"
 				as={'/projects/' + props.id}
 				aria-label="Single Project"
+				passHref
 			>
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>
@@ -30,7 +31,7 @@ const ProjectSingle = (props) => {
 						/>
 					</div>
 					<div className="text-center px-4 py-6">
-						<p className="text-2xl text-ternary-dark dark:text-ternary-light font-semibold mb-2">
+						<p className="font-general-medium text-xl md:text-2xl text-ternary-dark dark:text-ternary-light mb-2">
 							{props.title}
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">

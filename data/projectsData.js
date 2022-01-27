@@ -391,7 +391,7 @@ export const projectsData = [
 		title: 'Cloud Storage Platform',
 		url: 'cloud-storage-platform',
 		category: 'UI/UX Design',
-		img: '/images/ui-project-1.jpg',
+		img: '/images/ui-project-2.jpg',
 		ProjectHeader: {
 			title: 'Cloud Storage Platform',
 			publishDate: 'Jul 26, 2021',
