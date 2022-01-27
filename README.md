@@ -14,6 +14,7 @@ A simple portfolio starter theme built with Next.js, React and TailwindCSS. This
 -   [Tailwind CSS v3](https://tailwindcss.com)
 -   Custom Hooks
 -   Framer Motion Transitions & Animations
+-   Reusable Components
 -   Projects filter by category
 -   Projects filter by search
 -   Dark Mode
