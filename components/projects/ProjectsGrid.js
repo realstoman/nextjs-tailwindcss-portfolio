@@ -28,19 +28,12 @@ function ProjectsGrid() {
 
 	return (
 		<section className="py-5 mt-5 md:mt-10">
-			{/* Projects grid title start */}
 			<div className="text-center">
 				<p className="text-2xl sm:text-5xl font-semibold mb-3 text-ternary-dark dark:text-ternary-light">
 					Projects portfolio
 				</p>
-				{/* Note: This description is commented, but if you want to have it, just uncomment it */}
-				{/* <p className="text-md sm:text-xl text-gray-500 dark:text-ternary-light">
-					Some of my projects are listed below
-				</p> */}
 			</div>
-			{/* Projects grid title end */}
 
-			{/* Filter and search projects start */}
 			<div className="mt-10 sm:mt-16">
 				<h3
 					className="
@@ -107,15 +100,11 @@ function ProjectsGrid() {
 							aria-label="Name"
 						/>
 					</div>
-					{/* <ProjectsFilter @change="selectedProject = $event" /> */}
 
 					<ProjectsFilter setSelectProject={setSelectProject} />
-					{/* <p>Filter projects</p> */}
 				</div>
 			</div>
-			{/* Filter and search projects end */}
 
-			{/* Projects grid start */}
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
 				{selectProject
 					? selectProjectsByCategory.map((project, index) => {
@@ -125,7 +114,6 @@ function ProjectsGrid() {
 							<ProjectSingle key={index} {...project} />
 					  ))}
 			</div>
-			{/* Projects grid end */}
 		</section>
 	);
 }

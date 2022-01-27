@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useContext } from 'react';
 import { useState } from 'react';
 import { aboutMeData } from '../../data/aboutMeData';
 
@@ -7,7 +6,6 @@ function AboutMeBio() {
 	const [aboutMe, setAboutMe] = useState(aboutMeData);
 	return (
 		<div className="block sm:flex sm:gap-10 mt-10">
-			{/* About me portfolio image start */}
 			<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<Image
 					src="/images/profile.jpeg"
@@ -17,9 +15,7 @@ function AboutMeBio() {
 					alt="Profile Image"
 				/>
 			</div>
-			{/* About me portfolio image end */}
 
-			{/* About me details start */}
 			<div className="w-full sm:w-3/4 text-left">
 				{aboutMe.map((bio) => (
 					<p
@@ -30,7 +26,6 @@ function AboutMeBio() {
 					</p>
 				))}
 			</div>
-			{/* About me details end */}
 		</div>
 	);
 }

@@ -17,6 +17,7 @@ const ProjectSingle = (props) => {
 				href="/projects/[id]"
 				as={'/projects/' + props.id}
 				aria-label="Single Project"
+				passHref
 			>
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>

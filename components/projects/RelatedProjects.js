@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
 
 const RelatedProject = {
@@ -36,9 +37,11 @@ function RelatedProjects() {
 			<div className="grid grid-cols-1 sm:grid-cols-4 gap-10">
 				{RelatedProject.Projects.map((project) => {
 					return (
-						<img
+						<Image
 							src={project.img}
 							className="rounded-xl cursor-pointer"
+							width="400"
+							height="400"
 							alt={project.title}
 							key={project.id}
 						/>
