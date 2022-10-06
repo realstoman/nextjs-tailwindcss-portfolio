@@ -16,10 +16,11 @@ function AboutClients() {
 						title={client.title}
 						image={client.img}
 						key={client.id}
+						href={client.link}
 					/>
 				))}
 			</div>
-		</div>
+				</div>
 	);
 }
 
