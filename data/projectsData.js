@@ -22,8 +22,8 @@ export const projectsData = [
     ProjectImages: [
       {
         id: uuidv4(),
-        title: "Google Health Platform",
-        img: "/images/CSSlogo.png",
+        title: "HtmlCss",
+        img: "/images/csslogo.png",
       },
     ],
     ProjectInfo: {
@@ -128,7 +128,7 @@ export const projectsData = [
     title: "Portfolio V1",
     url: "https://worldwidegreg.github.io/MyPortfolio/",
     category: "Front-end",
-    img: "/images/projetportfoliov1.png",
+    img: "/images/ProjetPortfolioV1.png",
     ProjectHeader: {
       title: "Project UI",
       publishDate: "août, 2022",
@@ -180,7 +180,7 @@ export const projectsData = [
     title: "Cloud Storage",
     url: "/",
     category: "Management Server",
-    img: "/images/yunohost.png",
+    img: "/images/Yunohost.png",
     ProjectHeader: {
       title: "Serveur maison",
       publishDate: "Avril, 2022",
