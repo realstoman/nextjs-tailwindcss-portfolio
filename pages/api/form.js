@@ -4,15 +4,15 @@ const sgMail = require("@sendgrid/mail");
 export default function handler(req, res) {
   // Variables
   sgMail.setApiKey(
-    SENDGRID_API_KEY
+    process.env.SENDGRID_API_KEY
   );
 
   const body = req.body;
 
   // Création du message
   const sendGridMail = {
-    to: MAIL_PERSO,
-    from: MAIL_PERSO, // Use the email address or domain you verified above
+    to: process.env.MAIL_PERSO,
+    from: process.env.MAIL_PERSO, // Use the email address or domain you verified above
     subject: body.subject + " - " + body.name + " - " + body.email,
     text: body.message,
   };
@@ -32,7 +32,7 @@ export default function handler(req, res) {
   })();
   const sendGridMail2 = {
     to: body.email,
-    from: MAIL_PERSO, // Use the email address or domain you verified above
+    from: process.env.MAIL_PERSO, // Use the email address or domain you verified above
     subject: "Merci de votre prise de contact avec moi",
     text:
       "Vous m'avez envoyé ce message, et je vous en remercie: \n\n --- " +
