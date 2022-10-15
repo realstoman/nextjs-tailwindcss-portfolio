@@ -3,10 +3,9 @@ import { FiX } from "react-icons/fi";
 import Button from "./reusable/Button";
 
 const selectOptions = [
-  "Web Application",
-  "Mobile Application",
-  "UI/UX Design",
-  "Branding",
+  "Message personnel",
+  "Proposition d'amélioration",
+  "Contact professionnel",
 ];
 
 function HireMeModal({ onClose, onRequest }) {
@@ -26,7 +25,7 @@ function HireMeModal({ onClose, onRequest }) {
           <div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
             <div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
               <h5 className=" text-primary-dark dark:text-primary-light text-xl">
-                Un projet ? Une offre ? Un message ?
+                Un message ?
               </h5>
               <button
                 onClick={onClose}
@@ -59,6 +58,7 @@ function HireMeModal({ onClose, onRequest }) {
                     id="email"
                     name="email"
                     type="text"
+                    pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                     required
                     placeholder="E-mail"
                     aria-label="Email"
