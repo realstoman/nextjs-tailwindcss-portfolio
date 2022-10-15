@@ -1,20 +1,13 @@
 import { motion } from "framer-motion";
 import { FiX } from "react-icons/fi";
-import Button from "./reusable/Button";
 
-const selectOptions = [
-  "Message personnel",
-  "Proposition d'amélioration",
-  "Contact professionnel",
-];
-
-function MailSentModal({ onClose, onRequest }) {
+function MailSentModal({ onClose }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="font-general-medium fixed inset-0 z-30 transition-all duration-500"
+      className="font-general-medium fixed inset-0 z-30 transition-all duration-500 mailSentModal visible"
     >
       {/* Modal Backdrop */}
       <div className="bg-filter bg-black bg-opacity-50 fixed inset-0 w-full h-full z-20"></div>
@@ -35,13 +28,20 @@ function MailSentModal({ onClose, onRequest }) {
               </button>
             </div>
             <div className="modal-body p-5 w-full h-full">
-                <p className="text-primary-dark dark:text-primary-light"> Je vous recontacterai au plus tôt,</p>
-                <p className="text-primary-dark dark:text-primary-light"> Cordialement,</p>
-                <p className="text-primary-dark dark:text-primary-light"> Grégory MOREL.</p>
+              <p className="text-primary-dark dark:text-primary-light">
+                {" "}
+                Je vous recontacterai au plus tôt,
+              </p>
+              <p className="text-primary-dark dark:text-primary-light">
+                {" "}
+                Cordialement,
+              </p>
+              <p className="text-primary-dark dark:text-primary-light">
+                {" "}
+                Grégory MOREL.
+              </p>
             </div>
-            <div className="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right">
-             
-            </div>
+            <div className="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"></div>
           </div>
         </div>
       </main>
