@@ -130,6 +130,7 @@ function ContactForm() {
                 className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
                 id="message"
                 name="message"
+                placeholder="Tapez ici votre message, mais préférez toujours un mail écrit directement depuis votre boite mail."
                 cols="14"
                 rows="6"
                 aria-label="Message"
