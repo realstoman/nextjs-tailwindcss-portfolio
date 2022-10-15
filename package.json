@@ -2,7 +2,7 @@
   "name": "nextjs-tailwindcss-portfolio",
   "private": true,
   "scripts": {
-    "dev": "env-cmd next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

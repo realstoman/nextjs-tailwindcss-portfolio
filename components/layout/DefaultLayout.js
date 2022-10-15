@@ -6,6 +6,7 @@ const DefaultLayout = ({ children }) => {
 	return (
 		<>
 			<PagesMetaHead />
+			
 			<AppHeader />
 			<div>{children}</div>
 			<AppFooter />
