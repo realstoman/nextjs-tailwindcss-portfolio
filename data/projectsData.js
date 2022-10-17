@@ -98,7 +98,7 @@ export const projectsData = [
         {
           id: uuidv4(),
           details:
-            "Automate Python de récupération de mails spéciaux, parsing du Pdf trouvé en pièce-jointe et renvoi d'un mail précis aux destinataires en fonction des données du Pdf. Intéret: Permettre aux gens n'étant pas au bureau de connaitre leurs missions du lendemain sans avoir à appeler/passer au bureau.",
+            "Automate Python de récupération de mails spéciaux, parsing du Pdf trouvé en pièce-jointe et renvoi d'un mail précis aux destinataires en fonction des données du Pdf. Intérêt: Permettre aux gens n'étant pas au bureau de connaitre leurs missions du lendemain sans avoir à appeler/passer au bureau.",
         },
         {
           id: uuidv4(),
