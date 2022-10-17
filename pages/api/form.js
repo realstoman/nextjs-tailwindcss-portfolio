@@ -1,5 +1,5 @@
 const sgMail = require("@sendgrid/mail");
-
+require('dotenv').config()
 
 export default function handler(req, res) {
   // Variables
