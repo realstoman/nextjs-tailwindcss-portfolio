@@ -15,7 +15,6 @@ export default function handler(req, res) {
     subject: body.subject + " - " + body.name + " - " + body.email,
     text: body.message,
   };
-  //console.log("sendGridMail =", sendGridMail);
 
   // SendGrid
   (async () => {
