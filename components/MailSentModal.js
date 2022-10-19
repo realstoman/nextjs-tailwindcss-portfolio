@@ -40,6 +40,10 @@ function MailSentModal({ onClose }) {
                 {" "}
                 Grégory MOREL.
               </p>
+              <p className="text-primary-dark dark:text-primary-light text-sm italic">
+                {" "}
+                Ps: Un message de confirmation vous a été envoyé, merci de vérifier vos spams.
+              </p>
             </div>
             <div className="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"></div>
           </div>
