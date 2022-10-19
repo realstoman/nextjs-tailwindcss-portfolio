@@ -48,5 +48,4 @@ function MailSentModal({ onClose }) {
     </motion.div>
   );
 }
-
 export default MailSentModal;

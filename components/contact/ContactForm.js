@@ -11,7 +11,7 @@ const selectOptions = [
 function ContactForm() {
   const [showModal, setShowModal] = useState(false);
 
-  function ShowFormModal() {
+   async function ShowFormModal() {
     if (!showModal) {
       document
         .getElementsByTagName("html")[0]
