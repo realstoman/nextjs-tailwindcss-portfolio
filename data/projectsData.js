@@ -514,29 +514,29 @@ export const projectsData = [
 	},
 	{
 		id: 5,
-		title: 'React Social App',
-		url: 'react-social-app',
+		title: 'WeTalk Social Application',
+		url: 'wetalk-social-app',
 		category: 'Mobile Application',
 		img: '/images/mobile-project-1.jpg',
 		ProjectHeader: {
-			title: 'React Social App',
+			title: 'WeTalk Social Application',
 			publishDate: 'Jul 26, 2021',
 			tags: 'UI / Frontend',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Kabul React Social App',
+				title: 'WeTalk Social Application',
 				img: '/images/ui-project-1.jpg',
 			},
 			{
 				id: uuidv4(),
-				title: 'Kabul React Social App',
+				title: 'WeTalk Social Application',
 				img: '/images/web-project-2.jpg',
 			},
 			{
 				id: uuidv4(),
-				title: 'Kabul React Social App',
+				title: 'WeTalk Social Application',
 				img: '/images/mobile-project-2.jpg',
 			},
 		],
