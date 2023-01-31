@@ -1,33 +1,37 @@
-import Link from 'next/link';
 import {
-	FiBook,
-	FiFeather,
 	FiGithub,
-	FiInstagram,
 	FiTwitter,
+	FiLinkedin,
+	FiGlobe,
+	FiYoutube,
 } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
 
 const socialLinks = [
 	{
 		id: 1,
+		icon: <FiGlobe />,
+		url: 'https://www.stoman.me/',
+	},
+	{
+		id: 2,
 		icon: <FiGithub />,
 		url: 'https://github.com/realstoman',
 	},
 	{
-		id: 2,
+		id: 3,
 		icon: <FiTwitter />,
 		url: 'https://twitter.com/realstoman',
 	},
 	{
-		id: 3,
-		icon: <FiBook />,
-		url: 'https://stoman.medium.com',
+		id: 4,
+		icon: <FiLinkedin />,
+		url: 'https://www.linkedin.com/in/realstoman',
 	},
 	{
-		id: 4,
-		icon: <FiInstagram />,
-		url: 'https://instagram.com/realstoman',
+		id: 5,
+		icon: <FiYoutube />,
+		url: 'https://www.youtube.com/c/realstoman',
 	},
 ];
 
