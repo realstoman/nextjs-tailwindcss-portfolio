@@ -1,6 +1,6 @@
 import '../styles/globals.css';
-import DefaultLayout from '../components/layout/DefaultLayout';
 import { AnimatePresence } from 'framer-motion';
+import DefaultLayout from '../components/layout/DefaultLayout';
 import UseScrollToTop from '../hooks/useScrollToTop';
 
 function MyApp({ Component, pageProps }) {
