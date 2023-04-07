@@ -8,6 +8,12 @@ A simple portfolio starter theme built with Next.js, React and Tailwind CSS. Thi
 
 [https://nextjs-tailwindcss-portfolio.vercel.app](https://nextjs-tailwindcss-portfolio.vercel.app)
 
+## Other versions of this project
+
+-   React Version: [https://github.com/realstoman/react-tailwindcss-portfolio](https://github.com/realstoman/react-tailwindcss-portfolio)
+-   Vue.js Version: [https://github.com/realstoman/vuejs-tailwindcss-portfolio](https://github.com/realstoman/vuejs-tailwindcss-portfolio)
+-   Nuxt.js Version: [https://github.com/realstoman/nuxtjs-tailwindcss-portfolio](https://github.com/realstoman/nuxtjs-tailwindcss-portfolio)
+
 ## Features
 
 -   Built with [Next.js](https://nextjs.org) and [React](https://reactjs.org)
@@ -74,4 +80,5 @@ npm run dev
 -   Contributions are welcome
 
 ### License
+
 [MIT](https://github.com/realstoman/nextjs-tailwindcss-portfolio/blob/main/LICENSE)
