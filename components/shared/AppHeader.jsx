@@ -40,30 +40,36 @@ function AppHeader() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			id="nav"
-			className="sm:container sm:mx-auto"
+			className="sticky bg-white top-0 z-50 sm:container sm:mx-auto drop-shadow-md "
 		>
 			{/* Header */}
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div className="bg-white z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link href="/">
 							{activeTheme === 'dark' ? (
-								<Image
-									src={logoDark}
-									className="w-36 cursor-pointer"
-									alt="Dark Logo"
-									width={150}
-									height={120}
-								/>
+								<div className="flex justify-center items-center gap-2 font-medium text-lg">
+									<div className="grid p-6 bg-primary-light rounded-lg h-7 w-7 place-content-center">Benjamiz</div>
+								</div>
+								// <Image
+								// 	src={logoDark}
+								// 	className="w-36 cursor-pointer"
+								// 	alt="Dark Logo"
+								// 	width={150}
+								// 	height={120}
+								// />
 							) : (
-								<Image
-									src={logoLight}
-									className="w-36 cursor-pointer"
-									alt="Dark Logo"
-									width={150}
-									height={120}
-								/>
+								<div className="flex justify-center items-center gap-2 font-medium text-lg text-">
+									<div className="grid p-6 bg-ternary-dark rounded-lg h-7 w-7 place-content-center">Benjamiz</div>
+								</div>
+								// <Image
+								// 	src={logoLight}
+								// 	className="w-36 cursor-pointer"
+								// 	alt="Dark Logo"
+								// 	width={150}
+								// 	height={120}
+								// />
 							)}
 						</Link>
 					</div>
