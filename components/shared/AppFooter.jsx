@@ -11,17 +11,20 @@ import AppFooterCopyright from './AppFooterCopyright';
 const socialLinks = [
 	{
 		id: 1,
-		icon: <FiBriefcase />,
+		icon:<FiBriefcase />,
+		help: "Go to résumé",
 		url: 'https://drive.google.com/file/d/1RvziNeA5eCUSuvf1LMSKcMNU2DlcdWHR/view?usp=sharing',
 	},
 	{
 		id: 2,
 		icon: <FiGithub />,
+		help: "Go to github",
 		url: 'https://github.com/Lenniott',
 	},
 	{
 		id: 3,
 		icon: <FiLinkedin />,
+		help: "Go to linkedin",
 		url: 'https://www.linkedin.com/in/mizranyb/',
 	},
 ];
