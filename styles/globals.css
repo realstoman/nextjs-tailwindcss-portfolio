@@ -4,244 +4,45 @@
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: 'GeneralSans-Variable';
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif; /* Use 'Nunito' from Google Fonts */
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
-}
-
-/* Fonts */
-@font-face {
-	font-family: 'GeneralSans-Variable';
-	src: url('../public/fonts/GeneralSans-Variable.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Variable.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Variable.ttf') format('truetype');
-	font-weight: 200 700;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-variable {
-	font-family: 'GeneralSans-Variable';
-}
-
-@font-face {
-	font-family: 'GeneralSans-VariableItalic';
-	src: url('../public/fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-VariableItalic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-VariableItalic.ttf') format('truetype');
-	font-weight: 200 700;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-variable-italic {
-	font-family: 'GeneralSans-VariableItalic';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Extralight';
-	src: url('../public/fonts/GeneralSans-Extralight.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Extralight.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Extralight.ttf') format('truetype');
-	font-weight: 200;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-extralight {
-	font-family: 'GeneralSans-Extralight';
-}
-
-@font-face {
-	font-family: 'GeneralSans-ExtralightItalic';
-	src: url('../public/fonts/GeneralSans-ExtralightItalic.woff2')
-			format('woff2'),
-		url('../public/fonts/GeneralSans-ExtralightItalic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-ExtralightItalic.ttf')
-			format('truetype');
-	font-weight: 200;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-extralight-italic {
-	font-family: 'GeneralSans-ExtralightItalic';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Light';
-	src: url('../public/fonts/GeneralSans-Light.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Light.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-light {
-	font-family: 'GeneralSans-Light';
-}
-
-@font-face {
-	font-family: 'GeneralSans-LightItalic';
-	src: url('../public/fonts/GeneralSans-LightItalic.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-LightItalic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-LightItalic.ttf') format('truetype');
-	font-weight: 300;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-light-italic {
-	font-family: 'GeneralSans-LightItalic';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Regular';
-	src: url('../public/fonts/GeneralSans-Regular.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Regular.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Regular.ttf') format('truetype');
-	font-weight: 400;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-regular {
-	font-family: 'GeneralSans-Regular';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Italic';
-	src: url('../public/fonts/GeneralSans-Italic.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Italic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Italic.ttf') format('truetype');
-	font-weight: 400;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-italic {
-	font-family: 'GeneralSans-Italic';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Medium';
-	src: url('../public/fonts/GeneralSans-Medium.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Medium.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Medium.ttf') format('truetype');
-	font-weight: 500;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-medium {
-	font-family: 'GeneralSans-Medium';
-}
-
-@font-face {
-	font-family: 'GeneralSans-MediumItalic';
-	src: url('../public/fonts/GeneralSans-MediumItalic.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-MediumItalic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-MediumItalic.ttf') format('truetype');
-	font-weight: 500;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-medium-italic {
-	font-family: 'GeneralSans-MediumItalic';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Semibold';
-	src: url('../public/fonts/GeneralSans-Semibold.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Semibold.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Semibold.ttf') format('truetype');
-	font-weight: 600;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-semibold {
-	font-family: 'GeneralSans-Semibold';
-}
-
-@font-face {
-	font-family: 'GeneralSans-SemiboldItalic';
-	src: url('../public/fonts/GeneralSans-SemiboldItalic.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-SemiboldItalic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-SemiboldItalic.ttf') format('truetype');
-	font-weight: 600;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-semibold-italic {
-	font-family: 'GeneralSans-SemiboldItalic';
-}
-
-@font-face {
-	font-family: 'GeneralSans-Bold';
-	src: url('../public/fonts/GeneralSans-Bold.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-Bold.woff') format('woff'),
-		url('../public/fonts/GeneralSans-Bold.ttf') format('truetype');
-	font-weight: 700;
-	font-display: swap;
-	font-style: normal;
-}
-
-.font-general-bold {
-	font-family: 'GeneralSans-Bold';
-}
-
-@font-face {
-	font-family: 'GeneralSans-BoldItalic';
-	src: url('../public/fonts/GeneralSans-BoldItalic.woff2') format('woff2'),
-		url('../public/fonts/GeneralSans-BoldItalic.woff') format('woff'),
-		url('../public/fonts/GeneralSans-BoldItalic.ttf') format('truetype');
-	font-weight: 700;
-	font-display: swap;
-	font-style: italic;
-}
-
-.font-general-bold-italic {
-	font-family: 'GeneralSans-BoldItalic';
+  box-sizing: border-box;
 }
 
 /* Scroll to top style */
 .scrollToTop {
-	@apply bg-indigo-600;
-	@apply text-white;
-	position: fixed;
-	width: 100%;
-	align-items: center;
-	height: 20px;
-	justify-content: center;
-	z-index: 999;
-	cursor: pointer;
-	animation: fadeIn 0.3s;
-	transition: opacity 0.4s;
-	opacity: 1;
+  @apply bg-indigo-600;
+  @apply text-white;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  height: 20px;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 1;
 }
 
 .scrollToTop:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0.5;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
