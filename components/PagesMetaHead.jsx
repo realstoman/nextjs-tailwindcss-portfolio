@@ -8,10 +8,6 @@ function PagesMetaHead({ title, keywords, description }) {
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
       <link rel="icon" href="/images/logo/favicon.svg" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      />
       <title>{title}</title>
     </Head>
   );
