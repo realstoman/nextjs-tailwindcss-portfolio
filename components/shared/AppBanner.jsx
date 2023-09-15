@@ -74,7 +74,7 @@ function AppBanner() {
 							? '/images/hero.png'
 							: '/images/hero.png'
 					}
-					alt="Developer"
+					alt="product designer"
 				/>
 			</motion.div>
 		</motion.section>
