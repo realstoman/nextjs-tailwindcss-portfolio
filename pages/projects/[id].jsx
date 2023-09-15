@@ -7,24 +7,24 @@ import { projectsData } from "../../data/projectsData";
 import RelatedProjects from "../../components/projects/RelatedProjects";
 import ImageModal from "../../components/HireMeModal";
 function ProjectSingle(props) {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  //   const [showModal, setShowModal] = useState(false);
+  //   const [selectedImage, setSelectedImage] = useState(null);
 
-  function showImageModal(image) {
-    if (!showModal) {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.add("overflow-y-hidden");
-      setShowModal(true);
-      setSelectedImage(image);
-    } else {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.remove("overflow-y-hidden");
-      setShowModal(false);
-      setSelectedImage(null);
-    }
-  }
+  //   function showImageModal(image) {
+  //     if (!showModal) {
+  //       document
+  //         .getElementsByTagName("html")[0]
+  //         .classList.add("overflow-y-hidden");
+  //       setShowModal(true);
+  //       setSelectedImage(image);
+  //     } else {
+  //       document
+  //         .getElementsByTagName("html")[0]
+  //         .classList.remove("overflow-y-hidden");
+  //       setShowModal(false);
+  //       setSelectedImage(null);
+  //     }
+  //   }
 
   return (
     <div className="container mx-auto">
@@ -32,11 +32,11 @@ function ProjectSingle(props) {
 
       {/* Header */}
       <div>
-        <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+        <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-4">
           {props.project.ProjectHeader.title}
         </p>
         <div className="flex">
-          <div className="flex items-center mr-10">
+          {/* <div className="flex items-center mr-10">
             <FiClock className="text-xl text-ternary-dark dark:text-ternary-light" />
             <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
               {props.project.ProjectHeader.publishDate}
@@ -47,12 +47,15 @@ function ProjectSingle(props) {
             <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
               {props.project.ProjectHeader.tags}
             </span>
-          </div>
+          </div> */}
+          <p className="font-general-regular text-primary-dark">
+            {props.project.ProjectHeader.description}
+          </p>
         </div>
       </div>
 
       {/* Gallery */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
         {props.project.ProjectImages.map((project) => {
           return (
             <div className="mb-10 sm:mb-0" key={project.id}>
@@ -61,7 +64,7 @@ function ProjectSingle(props) {
                 className="rounded-xl cursor-pointer shadow-lg sm:shadow-none hover:"
                 alt={project.title}
                 key={project.id}
-                onClick={() => showImageModal(project.img)}
+                // onClick={() => showImageModal(project.img)}
                 layout="responsive"
                 width={100}
                 height={90}
@@ -69,11 +72,11 @@ function ProjectSingle(props) {
             </div>
           );
         })}
-      </div>
+      </div> */}
 
       {/* Info */}
-      <div className="block sm:flex gap-0 sm:gap-10 mt-14">
-        <div className="w-full sm:w-1/3 text-left">
+      <div className="block sm:flex gap-0 sm:gap-10">
+        <div className="hidden w-full sm:w-1/3 text-left">
           {/* Single project client details */}
           <div className="mb-7">
             <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
@@ -133,24 +136,42 @@ function ProjectSingle(props) {
         </div>
 
         {/*  Single project right section details */}
-        <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+        <div className="w-full text-left">
           <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
             {props.project.ProjectInfo.ProjectDetailsHeading}
           </p>
-          {props.project.ProjectInfo.ProjectDetails.map((details) => {
+          {props.project.ProjectInfo.ProjectDetails.map((details, index) => {
             return (
-              <p
+              <div
                 key={details.id}
-                className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+                className={`flex  gap-8 ${
+                  index % 2 === 0 ? "" : "md:flex-row-reverse"
+                } `}
               >
-                {details.details}
-              </p>
+                {details.img && (
+                  <div className="w-2/5 grid gap-2">
+                    <Image
+                      alt={details.alt}
+                      src={details.img}
+                      width={300}
+                      height={300}
+                      className="w-full rounded-lg"
+                    />
+                    <p className="text-center text-xs">{details.alt}</p>
+                  </div>
+                )}
+                {details.details && (
+                  <p className={`w-3/5 items-center ${details.style}`}>
+                    {details.details}
+                  </p>
+                )}
+              </div>
             );
           })}
         </div>
       </div>
       <RelatedProjects />
-      <div>
+      {/* <div>
         {showModal ? (
           <ImageModal
             onClose={showImageModal}
@@ -159,7 +180,7 @@ function ProjectSingle(props) {
           />
         ) : null}
         {showModal ? showImageModal : null}
-      </div>
+      </div> */}
     </div>
   );
 }

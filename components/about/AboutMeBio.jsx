@@ -18,7 +18,7 @@ function AboutMeBio() {
               src={bio.image}
               width={250}
               height={450}
-              className="h-full transition ease-in-out duration-300  rounded-lg grayscale hover:grayscale-0"
+              className="h-full transition ease-in-out   rounded-lg grayscale hover:grayscale-0 duration-500"
               alt="Profile Image"
             />
             <div className="pb-10">
