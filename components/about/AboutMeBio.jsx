@@ -5,7 +5,7 @@ import { aboutMeData } from "../../data/aboutMeData";
 function AboutMeBio() {
   const [aboutMe, setAboutMe] = useState(aboutMeData);
   return (
-    <div className="  bg-red-50 sm:flex sm:gap-10 mt-10 sm:mt-20">
+    <div className="sm:flex sm:gap-10 mt-10 sm:mt-20">
       <div className="font-general-regular text-left">
         {aboutMe.map((bio, index) => (
           <div
