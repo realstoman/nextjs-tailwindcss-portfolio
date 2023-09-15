@@ -1,11 +1,4 @@
 import { v4 as uuidv4 } from "uuid";
-import {
-  FiFacebook,
-  FiInstagram,
-  FiLinkedin,
-  FiTwitter,
-  FiYoutube,
-} from "react-icons/fi";
 
 export const projectsData = [
   {
@@ -15,103 +8,61 @@ export const projectsData = [
     category: "Working principles",
     img: "/images/project 1/group.jpg",
     ProjectHeader: {
-      title: "Google Health Platform",
-      publishDate: "Jul 26, 2021",
-      tags: "UI / Frontend",
+      title: "The Paradox of Knowledge Handoffs",
+      publishDate: "Jul 2023",
       description:
-        "This case study explores an experience I had while working at Insendi, an online learning platform. It delves into the pressing question that emerged from my quest to understand our users:",
+        "This case study discusses my experience at Insendi, focusing on the challenges of knowledge handover and the importance of collective learning for effective product development.",
     },
-    ProjectImages: [
-      {
-        id: uuidv4(),
-        title: "Google Health Platform",
-        img: "/images/hero.png",
-      },
-      {
-        id: uuidv4(),
-        title: "Google Health Platform",
-        img: "/images/web-project-2.jpg",
-      },
-      {
-        id: uuidv4(),
-        title: "Google Health Platform",
-        img: "/images/mobile-project-2.jpg",
-      },
-    ],
     ProjectInfo: {
-      ClientHeading: "About Client",
-      CompanyInfo: [
-        {
-          id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
-        },
-        {
-          id: uuidv4(),
-          title: "Services",
-          details: "Web Development",
-        },
-        {
-          id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
-        },
-        {
-          id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
-        },
-      ],
-      ObjectivesHeading: "Objective",
-      ObjectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      Technologies: [
-        {
-          title: "Tools & Technologies",
-          techs: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Vue.js",
-            "TailwindCSS",
-            "AdobeXD",
-          ],
-        },
-      ],
       ProjectDetailsHeading: "",
       ProjectDetails: [
         {
           id: uuidv4(),
-          style:
-            "bg-indigo-100 font-general-italic mb-5 text-lg text-ternary-dark text-center font-semibold p-4 text-lg rounded-lg mb-12",
-          details:
-            '"How can I design effective solutions for users if I can\'t successfully communicate their needs and problems to my product team for implementation?"',
+          styleID: "quote",
+          title: "",
+          img: "",
+          alt: "",
+          body: "How can I claim expertise in designing experiences if I can't effectively create a knowledge-sharing process that shapes our product development?",
         },
         {
           id: uuidv4(),
+          styleID: "allDetails",
+          title: "A Team in Flux",
           img: "/images/project 1/project_1_insendi2022.jpeg",
-          alt: "insendi product team Gran Canaria 2022",
-          style: "bg-red-500 w-4/5",
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          alt: "product team Gran Canaria 2022",
+          body: "I stepped into my role as product designer during a period of significant upheaval. A newly-appointed CTO had just arrived, accompanied by a fresh team of product managers and a technical director. Amidst this flux, the air was rife with speculation about the future of Insendi's product, vision, and strategy. Conversations were swirling around the idea of dividing Insendi into three distinct applications, each tailored to a specific Job To Be Done (JTBD).",
         },
         {
           id: uuidv4(),
-          img: "/images/project 1/Humaaans - Wireframe (2).png",
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+          styleID: "chip",
+          title: "The coordinator's job to be done",
+          img: "",
+          alt: "",
+          body: "When a student cohort wants to enrol on an online course, help me coordinate and manage student access, faculty support, and course maintenance so that a seamless and effective learning experience is ensured for all stakeholders.",
         },
         {
           id: uuidv4(),
-          img: "/images/project 1/project_1_LearningDesignWorkFlow.jpg",
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+          styleID: "chip",
+          title: "The Builder's job to be done",
+          img: "",
+          alt: "",
+          body: "When tasked with educating a cohort of students through an online or blended format, help me design and structure a comprehensive and coherent course that effectively scaffolds the learning journey so that students can successfully master the subject matter and pass the course.",
         },
         {
           id: uuidv4(),
-          img: "/images/project 1/project_1_ProtoPersona.png",
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          styleID: "chip",
+          title: "The Deliverer's job to be done",
+          img: "",
+          alt: "",
+          body: "When the course is live and students are actively participating, help me effectively guide, engage, and assess students throughout their learning journey so that they successfully complete the course and earn meaningful grades.",
+        },
+        {
+          id: uuidv4(),
+          styleID: "textOnly",
+          title: "",
+          img: "",
+          alt: "",
+          body: 'Our team was tasked with the "Build" aspect, but the project awaited formal approval. So while we waited the team focused on platform architecture and tech debt removal. The product manager and I had the opportunity to do some initial discovery.',
         },
       ],
     },

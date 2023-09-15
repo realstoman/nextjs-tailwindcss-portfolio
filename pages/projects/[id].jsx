@@ -7,6 +7,10 @@ import { projectsData } from "../../data/projectsData";
 import RelatedProjects from "../../components/projects/RelatedProjects";
 import ImageModal from "../../components/HireMeModal";
 function ProjectSingle(props) {
+  const chip = {
+    header: "",
+  };
+
   //   const [showModal, setShowModal] = useState(false);
   //   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -25,6 +29,91 @@ function ProjectSingle(props) {
   //       setSelectedImage(null);
   //     }
   //   }
+  const renderLayout = (details, index) => {
+    switch (details.styleID) {
+      case "ImageOnly":
+        return (
+          <div className={styles.imageOnly}>
+            {/* Your ImageOnly layout JSX */}
+          </div>
+        );
+      case "textOnly":
+        return (
+          <div key={details.id} className="mb-8 mt-4">
+            <div className="bg-indigo-100 p-4 rounded-lg">
+              <h2 className="w-full flex justify-start text-2xl font-semibold">
+                {details.title}
+              </h2>
+              <p className="font-general-italic text-ternary-dark text-center font-semibold  text-lg ">
+                {details.body}
+              </p>
+            </div>
+          </div>
+        );
+      case "allDetails":
+        return (
+          <>
+            <div
+              key={details.id}
+              className={`grid md:flex gap-8 mb-8 mt-4 ${
+                (index + 1) % 2 === 0 ? "" : "md:flex-row-reverse"
+              } `}
+            >
+              <div className="md:w-2/5 grid gap-2">
+                <Image
+                  alt={details.alt}
+                  src={details.img}
+                  width={300}
+                  height={300}
+                  className="w-full rounded-lg"
+                />
+                <p className="text-center text-xs">{details.alt}</p>
+              </div>
+
+              <div
+                className={`flex md:my-8  ${
+                  details.img ? "md:w-3/5" : ""
+                } flex-col justify-center items-center`}
+              >
+                <h2 className="w-full flex justify-start text-2xl font-semibold pb-2">
+                  {details.title}
+                </h2>
+
+                <p className="">{details.body}</p>
+              </div>
+            </div>
+          </>
+        );
+      case "quote":
+        return (
+          <div key={details.id} className="mb-8 mt-4">
+            <div className="bg-indigo-100 p-4 rounded-lg">
+              <h2 className="w-full flex justify-start text-2xl font-semibold">
+                {details.title}
+              </h2>
+              <p className="font-general-italic text-ternary-dark text-center font-semibold  text-lg ">
+                {details.body}
+              </p>
+            </div>
+          </div>
+        );
+      case "chip":
+        return (
+          <div key={details.id} className="mb-8 mt-4">
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <h2 className="w-full flex justify-start text-xl font-semibold text-gray-700 pb-2">
+                {details.title}
+              </h2>
+              <p className="font-general-italic text-ternary-dark text-left font-semibold  text-lg ">
+                "{details.body}"
+              </p>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="container mx-auto">
@@ -36,137 +125,21 @@ function ProjectSingle(props) {
           {props.project.ProjectHeader.title}
         </p>
         <div className="flex">
-          {/* <div className="flex items-center mr-10">
-            <FiClock className="text-xl text-ternary-dark dark:text-ternary-light" />
-            <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-              {props.project.ProjectHeader.publishDate}
-            </span>
-          </div>
-          <div className="flex items-center">
-            <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
-            <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-              {props.project.ProjectHeader.tags}
-            </span>
-          </div> */}
           <p className="font-general-regular text-primary-dark">
             {props.project.ProjectHeader.description}
           </p>
         </div>
       </div>
 
-      {/* Gallery */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-        {props.project.ProjectImages.map((project) => {
-          return (
-            <div className="mb-10 sm:mb-0" key={project.id}>
-              <Image
-                src={project.img}
-                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none hover:"
-                alt={project.title}
-                key={project.id}
-                // onClick={() => showImageModal(project.img)}
-                layout="responsive"
-                width={100}
-                height={90}
-              />
-            </div>
-          );
-        })}
-      </div> */}
-
       {/* Info */}
       <div className="block sm:flex gap-0 sm:gap-10">
-        <div className="hidden w-full sm:w-1/3 text-left">
-          {/* Single project client details */}
-          <div className="mb-7">
-            <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
-              {props.project.ProjectInfo.ClientHeading}
-            </p>
-            <ul className="leading-loose">
-              {props.project.ProjectInfo.CompanyInfo.map((info) => {
-                return (
-                  <li
-                    className="font-general-regular text-ternary-dark dark:text-ternary-light"
-                    key={info.id}
-                  >
-                    <span>{info.title}: </span>
-                    <a
-                      href="https://stoman.me"
-                      className={
-                        info.title === "Website" || info.title === "Phone"
-                          ? "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
-                          : ""
-                      }
-                      aria-label="Project Website and Phone"
-                    >
-                      {info.details}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* Single project objectives */}
-          <div className="mb-7">
-            <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-              {props.project.ProjectInfo.ObjectivesHeading}
-            </p>
-            <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-              {props.project.ProjectInfo.ObjectivesDetails}
-            </p>
-          </div>
-
-          {/* Single project technologies */}
-          <div className="mb-7">
-            <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-              {props.project.ProjectInfo.Technologies[0].title}
-            </p>
-            <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-              {props.project.ProjectInfo.Technologies[0].techs.join(", ")}
-            </p>
-          </div>
-
-          {/* Single project social sharing */}
-          <div>
-            <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-              {props.project.ProjectInfo.SocialSharingHeading}
-            </p>
-          </div>
-        </div>
-
         {/*  Single project right section details */}
         <div className="w-full text-left">
           <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
             {props.project.ProjectInfo.ProjectDetailsHeading}
           </p>
           {props.project.ProjectInfo.ProjectDetails.map((details, index) => {
-            return (
-              <div
-                key={details.id}
-                className={`flex  gap-8 ${
-                  index % 2 === 0 ? "" : "md:flex-row-reverse"
-                } `}
-              >
-                {details.img && (
-                  <div className="w-2/5 grid gap-2">
-                    <Image
-                      alt={details.alt}
-                      src={details.img}
-                      width={300}
-                      height={300}
-                      className="w-full rounded-lg"
-                    />
-                    <p className="text-center text-xs">{details.alt}</p>
-                  </div>
-                )}
-                {details.details && (
-                  <p className={`w-3/5 items-center ${details.style}`}>
-                    {details.details}
-                  </p>
-                )}
-              </div>
-            );
+            return <div key={details.id}>{renderLayout(details, index)}</div>;
           })}
         </div>
       </div>
