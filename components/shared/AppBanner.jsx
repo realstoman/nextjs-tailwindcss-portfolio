@@ -24,7 +24,7 @@ function AppBanner() {
           }}
           className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
         >
-          Hi, Benjamin
+          Hi👋🏽, I'm Benjamin
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
