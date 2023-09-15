@@ -6,7 +6,7 @@ import PagesMetaHead from '../components/PagesMetaHead';
 function contact() {
 	return (
 		<div>
-			<PagesMetaHead title="Contact" />
+			<PagesMetaHead title="cv" />
 
 			<motion.div
 				initial={{ opacity: 0 }}
