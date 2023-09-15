@@ -24,6 +24,23 @@ function AppHeader() {
     };
   }, []);
 
+  function navMenu(array) {
+        return (
+          <>
+          <div className=" ">
+          <Link
+            onClick={toggleMenu}
+            href="/projects"
+            aria-label="Projects"
+            className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500"
+          >
+            Projects
+          </Link>
+        </div>
+        <hr className="border-gray-100 " />
+        </>
+        )
+  }
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -73,11 +90,12 @@ function AppHeader() {
                   : "hidden"
               }
             >
-              <div className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500">
+              <div className=" ">
                 <Link
                   onClick={toggleMenu}
                   href="/projects"
                   aria-label="Projects"
+                  className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500"
                 >
                   Projects
                 </Link>
