@@ -1,37 +1,19 @@
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiSun, FiMoon, FiX, FiMenu } from "react-icons/fi";
+import { FiX, FiMenu } from "react-icons/fi";
 import HireMeModal from "../HireMeModal";
-import logoLight from "../../public/images/logo-light.svg";
-import logoDark from "../../public/images/logo-dark.svg";
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [activeTheme, setTheme] = useThemeSwitcher();
 
   function toggleMenu() {
     if (!showMenu) {
       setShowMenu(true);
     } else {
       setShowMenu(false);
-    }
-  }
-
-  function showHireMeModal() {
-    if (!showModal) {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.add("overflow-y-hidden");
-      setShowModal(true);
-    } else {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.remove("overflow-y-hidden");
-      setShowModal(false);
     }
   }
 
@@ -42,109 +24,57 @@ function AppHeader() {
       id="nav"
       className="fixed bg-white px-6 top-0 z-50  w-full "
     >
-      {/* Header bg-white z-10  xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-2*/}
+      {/* Header */}
       <div className="bg-white z-10 max-w-screen-md mx-auto flex py-2 justify-between items-center">
         {/* Header menu links and small screen hamburger menu */}
         <div className="flex justify-between items-center sm:px-0">
           <div>
             <Link href="/">
-              {activeTheme === "dark" ? (
-                <div className="flex justify-center items-center gap-2 font-medium text-lg">
-                  <div className="grid p-6 bg-primary-light rounded-lg h-7 w-7 place-content-center">
-                    Benjamiz
-                  </div>
+              <div className="flex justify-center items-center gap-2 font-medium text-lg">
+                <div className="grid p-6 bg-primary-light shadow-lg rounded-lg h-7 w-7 place-content-center">
+                  Benjamiz
                 </div>
-              ) : (
-                // <Image
-                // 	src={logoDark}
-                // 	className="w-36 cursor-pointer"
-                // 	alt="Dark Logo"
-                // 	width={150}
-                // 	height={120}
-                // />
-                <div className="flex justify-center items-center gap-2 font-medium text-lg text-">
-                  <div className="grid p-6 bg-ternary-light rounded-lg h-7 w-7 place-content-center">
-                    Benjamiz
-                  </div>
-                </div>
-                // <Image
-                // 	src={logoLight}
-                // 	className="w-36 cursor-pointer"
-                // 	alt="Dark Logo"
-                // 	width={150}
-                // 	height={120}
-                // />
-              )}
+              </div>
             </Link>
-          </div>
-
-          {/* Theme switcher small screen */}
-          {/* <div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div> */}
-
-          {/* Small screen hamburger menu */}
-          <div className="sm:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="focus:outline-none"
-              aria-label="Hamburger Menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
-              >
-                {showMenu ? (
-                  <FiX className="text-3xl" />
-                ) : (
-                  <FiMenu className="text-3xl" />
-                )}
-              </svg>
-            </button>
           </div>
         </div>
-
-        {/* Header links small screen */}
-        <div
-          className={
-            showMenu
-              ? "block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 pb-full sm: z-10 p-0 justify-between items-center shadow-lg sm:shadow-none"
-              : "hidden"
-          }
-        >
-          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
-            <Link href="/projects" aria-label="Projects">
-              Projects
-            </Link>
-          </div>
-          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-            <Link href="/about" aria-label="About Me">
-              About Me
-            </Link>
-          </div>
-          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-            <Link href="/contact" aria-label="Contact">
-              Contact
-            </Link>
-          </div>
-          <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-            <button
-              onClick={showHireMeModal}
-              className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-              aria-label="Hire Me Button"
-            >
-              Hire Me
-            </button>
+        {/* Small screen hamburger menu */}
+        <div className="sm:hidden ç">
+          <button
+            onClick={toggleMenu}
+            type="button"
+            className="focus:outline-none w-12 h-12 font-general-medium flex justify-center items-center text-lg shadow-lg rounded-lg bg-primary-light hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+            aria-label="Hamburger Menu"
+          >
+            {showMenu ? (
+              <FiX className="text-3xl" />
+            ) : (
+              <FiMenu className="text-3xl" />
+            )}
+          </button>
+          {/* Header links small screen */}
+          <div
+            className={
+              showMenu
+                ? "absolute right-6 m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 pb-full sm: z-10 p-0 justify-between items-center shadow-lg sm:shadow-none "
+                : "hidden"
+            }
+          >
+            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+              <Link href="/projects" aria-label="Projects">
+                Projects
+              </Link>
+            </div>
+            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+              <Link href="/about" aria-label="About Me">
+                About Me
+              </Link>
+            </div>
+            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+              <Link href="/contact" aria-label="Contact">
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -172,36 +102,6 @@ function AppHeader() {
         </div>
 
         {/* Header right section buttons */}
-        <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-          <div className="hidden md:flex">
-            <button
-              onClick={showHireMeModal}
-              className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-              aria-label="Hire Me Button"
-            >
-              Hire Me
-            </button>
-          </div>
-
-          {/* Theme switcher large screen */}
-          {/* <div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div> */}
-        </div>
-      </div>
-      <div>
-        {showModal ? (
-          <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />
-        ) : null}
-        {showModal ? showHireMeModal : null}
       </div>
     </motion.nav>
   );
