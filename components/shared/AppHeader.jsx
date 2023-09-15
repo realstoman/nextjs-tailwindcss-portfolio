@@ -29,7 +29,7 @@ function AppHeader() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       id="nav"
-      className="fixed top-0 z-50  w-full "
+      className="sticky top-0 z-50  w-full "
     >
       {/* Header */}
       <div className="bg-white  z-10 w-full">
