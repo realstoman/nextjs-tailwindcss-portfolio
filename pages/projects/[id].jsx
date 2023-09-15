@@ -1,23 +1,30 @@
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
+
 import { FiClock, FiTag } from "react-icons/fi";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
 import RelatedProjects from "../../components/projects/RelatedProjects";
-
+import ImageModal from "../../components/HireMeModal";
 function ProjectSingle(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const showModal = (image) => {
-    setIsOpen(true);
-    setSelectedImage(image);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-    setSelectedImage(null);
-  };
+  function showImageModal(image) {
+    if (!showModal) {
+      document
+        .getElementsByTagName("html")[0]
+        .classList.add("overflow-y-hidden");
+      setShowModal(true);
+      setSelectedImage(image);
+    } else {
+      document
+        .getElementsByTagName("html")[0]
+        .classList.remove("overflow-y-hidden");
+      setShowModal(false);
+      setSelectedImage(null);
+    }
+  }
 
   return (
     <div className="container mx-auto">
@@ -26,7 +33,7 @@ function ProjectSingle(props) {
       {/* Header */}
       <div>
         <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
-          {props.project.ProjectHeader.title} {isOpen.toString()}
+          {props.project.ProjectHeader.title}
         </p>
         <div className="flex">
           <div className="flex items-center mr-10">
@@ -54,7 +61,7 @@ function ProjectSingle(props) {
                 className="rounded-xl cursor-pointer shadow-lg sm:shadow-none hover:"
                 alt={project.title}
                 key={project.id}
-                onClick={() => showModal(project.img)}
+                onClick={() => showImageModal(project.img)}
                 layout="responsive"
                 width={100}
                 height={90}
@@ -142,52 +149,17 @@ function ProjectSingle(props) {
           })}
         </div>
       </div>
-
       <RelatedProjects />
-
-      {isOpen && (
-        <div className="z-50 bg-black/50 absolute inset-0 grid place-items-center">
-          <div className="bg-white flex p-8 grid gap-4 rounded-lg">
-            <header className="inline-flex gap-2 items-center">
-              <h1 className="flex text-xl grow font-normal">Title</h1>
-              <button
-                label="close"
-                className="relative rounded-lg grid place-items-center hover:bg-gray-200"
-                onClick={closeModal}
-              >
-                <svg
-                  className="h-8 w-8"
-                  viewBox="0 0 50 50"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                >
-                  <path
-                    transform="translate(12.5,12.5)"
-                    d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"
-                  />
-                </svg>
-              </button>
-            </header>
-            <main className="my-2">
-              <Image
-                src={selectedImage}
-                alt="test"
-				fill
-				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </main>
-            <footer className="gap-2 flex">
-              <button
-                onClick={closeModal}
-                className="rounded-md px-8 py-2 bg-red-500 border border-transparent text-white text-base font-medium hover:border-red-800 hover:underline"
-              >
-                Confirm
-              </button>
-            </footer>
-          </div>
-        </div>
-      )}
+      <div>
+        {showModal ? (
+          <ImageModal
+            onClose={showImageModal}
+            onRequest={showImageModal}
+            image={selectedImage}
+          />
+        ) : null}
+        {showModal ? showImageModal : null}
+      </div>
     </div>
   );
 }

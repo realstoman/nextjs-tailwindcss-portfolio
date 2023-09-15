@@ -23,7 +23,7 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Google Health Platform',
-				img: '/images/ui-project-1.jpg',
+				img: '/images/hero.png',
 			},
 			{
 				id: uuidv4(),
