@@ -5,18 +5,8 @@ import { aboutMeData } from "../../data/aboutMeData";
 function AboutMeBio() {
   const [aboutMe, setAboutMe] = useState(aboutMeData);
   return (
-    <div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
-      {/* <div className="w-full sm:w-1/4 mb-7 sm:mb-0">
-				<Image
-					src="/images/profile.jpeg"
-					width={200}
-					height={200}
-					className="rounded-lg grayscale"
-					alt="Profile Image"
-				/>
-			</div> */}
-
-      <div className="font-general-regular w-full text-left">
+    <div className="  bg-red-50 sm:flex sm:gap-10 mt-10 sm:mt-20">
+      <div className="font-general-regular text-left">
         {aboutMe.map((bio, index) => (
           <div
             className={`mb-8 text-ternary-dark dark:text-ternary-light text-lg grid gap-12 place-items-center md:flex md:flex-row  md:gap-8  ${
