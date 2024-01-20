@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
@@ -24,7 +24,7 @@ function AppBanner() {
 					}}
 					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 				>
-					Hi, Iam Stoman
+					Hello World, I am Joshua Mohammed!
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -49,8 +49,8 @@ function AppBanner() {
 					className="flex justify-center sm:block"
 				>
 					<a
-						download="Stoman-Resume.pdf"
-						href="/files/Stoman-Resume.pdf"
+						download="Resume_Mohammed_Joshua-2023.pdf"
+						href="/files/Resume_Mohammed_Joshua-2023.pdf"
 						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
 						aria-label="Download Resume"
 					>
@@ -71,8 +71,8 @@ function AppBanner() {
 					layout="responsive"
 					src={
 						activeTheme === 'dark'
-							? '/images/developer.svg'
-							: '/images/developer-dark.svg'
+							? 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/5eeea355389655.59822ff824b72.gif'
+							: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/5eeea355389655.59822ff824b72.gif'
 					}
 					alt="Developer"
 				/>

@@ -245,3 +245,49 @@ a {
 		opacity: 0.5;
 	}
 }
+
+/* General hover effect for all links */
+.font-general-medium div:hover a {
+	transform: scale(1.05); /* Subtle scale for 3D-like pop-up */
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Enhance depth */
+  }
+  
+  /* Projects link hover effect */
+  .font-general-medium div:first-child:hover a {
+	text-decoration: underline;
+	text-decoration-thickness: 3px; /* Thicker underline */
+	text-decoration-color: #f06292;
+	margin-bottom: 5px; /* Space between underline and next element */
+  }
+  
+  /* About Me link hover effect */
+  .font-general-medium div:nth-child(2):hover a {
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+	text-decoration-color: #48bb78;
+	margin-bottom: 5px;
+	animation: shake 0.3s linear infinite; /* Add the shaking animation */
+  }
+  
+  /* Contact link hover effect */
+  .font-general-medium div:last-child:hover a {
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+	text-decoration-color: #3498db;
+	margin-bottom: 5px;
+  }
+  
+  /* Click pop-up effect */
+  .font-general-medium div a:active {
+	transform: scale(0.95); /* Shrink slightly on click */
+	background-color: rgba(255, 255, 255, 0.2); /* Subtle background highlight */
+  }
+
+  /* Shaking animation definition */
+@keyframes shake {
+	0%, 100% { transform: translateX(180); }
+	20%, 60% { transform: translateX(-15px); }
+	40%, 80% { transform: translateX(15px); }
+  }
+  
+  

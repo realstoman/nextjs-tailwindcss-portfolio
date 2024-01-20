@@ -9,16 +9,14 @@ function ProjectsGrid() {
 	const [selectProject, setSelectProject] = useState();
 
 	// @todo - To be fixed
-	// const searchProjectsByTitle = projectsData.filter((item) => {
-	// 	const result = item.title
-	// 		.toLowerCase()
-	// 		.includes(searchProject.toLowerCase())
-	// 		? item
-	// 		: searchProject == ''
-	// 		? item
-	// 		: '';
-	// 	return result;
-	// });
+	const searchProjectsByTitle = (projectsData, searchProject) => {
+		// Cache the lowercase version of searchProject for efficiency
+		const searchTerm = searchProject.toLowerCase();
+	  
+		// Return filtered results directly using a concise conditional expression
+		return projectsData.filter(item => item.title.toLowerCase().includes(searchTerm));
+	  };
+	  
 
 	const selectProjectsByCategory = projectsData.filter((item) => {
 		let category =

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { IconBase } from 'react-icons/lib';
 
 function PagesMetaHead({ title, keywords, description }) {
 	return (
